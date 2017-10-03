@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blog | The Blend</title>
+    
+    <link href="../css/main.css" rel="stylesheet" type="text/css" />
+
+         
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!--[if lt IE 9]>
+    <../script src="scripts/html5shiv.js"></script>
+    <![endif]-->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    
+    <script type="text/javascript">
+    $(document).ready(function(){
+       function fullScreen() {
+           $("#heroBlog").css({
+               width:$(window).width(),
+               height:$(window).height()
+           });
+       } 
+        fullScreen();
+        
+        $(window).resize(function(){
+            fullScreen();
+        });
+        
+    });
+    </script>
+    
+
+    <link rel="icon" href="../images/icon.png" sizes="16x16" type="image/png">
+    
+</head>
+
+<body>
+    <div id="mainNav">
+        <div id="home">
+            <a href="../index.html"><img src="../images/icon.png" alt="Home bottom" /></a>
+        </div>
+<input type="checkbox" id="toggle" />
+<label for="toggle">Menu</label>
+<nav class="navigation">
+	<ul>
+	    <li><a href="aboutus.html">ABOUT US</a></li>
+	    <li class="menuItem">MENU<ul>
+	        <li><a href="menu/bowls.html">BOWLS</a></li>
+            <li><a href="menu/smoothies.html">SMOOTHIES</a></li>
+            <li><a href="menu/orderOnline.html">ORDER ONLINE</a></li>
+	    </ul></li>
+	    <li><a>SPECIALS</a></li>
+	    <li><a href="catering.html">CATERING</a></li>
+	    <li class="current"><a href="blog.html">BLOG</a></li>
+	    <li class="contactItem">CONTACT US<ul>
+	   	    <li><a href="contactUs/contactUs.html">CONTACT US</a></li>
+	        <li><a href="contactUs/career.html">CAREER</a></li>
+	    </ul></li>
+	</ul>
+</nav>
+
+</div>
+<div class="clearIt">
+    
+</div>
+    
+
+        <header id="heroBlog">
+            <article class="headerSection">
+                <h1>Welcome to The Blend Blog</h1>
+                
+            </article>
+        </header>
+        <p class="courtesy">Photos courtesy of the owner</p>
+        
+        
+    <section id="container">
+        
+        <article id="mainContent" class="blog">
+           <figure id="blog">
+            	<img src="../images/blog/blog_600x600.jpg" alt="Acai">
+            	<figcaption>Photo courtesy of the owner</figcaption>
+            </figure>
+            <section>
+			<h2>The açaí anti-aging properties</h2>
+            <p>Scientific researchers have been encouraging the cosmetic industry to include açaí in their chemical inventory.</p>
+            <p>One of the most popular bowls in San Diego, the acaí blend now can also be considered a great source of anthocyanin, a spectacular antioxidant pigment that fights aging. The information is from the Amazon National Research Institute, in Brazil.</p>
+
+			<p>The French cosmetics company L'Oréal, for instance, is one of those who use the purple Brazilian berry in it's formulas. "When infused into cosmetic formulas, acai constituents possess the potential to improve skin appearance by supplying antioxidant properties. Antioxidant protection works to protect the skin by neutralizing cell-damaging free radicals present in the environment. This effect may even help to prolong the integrity and quality of skincare products" says the company's web-page.</p>
+
+			<p>[http://www.lorealparisusa.com/ingredient-library/acai.aspx]</p>
+
+            <a href="http://www.healthguidance.org/entry/10520/1/Health-Benefits-of-Acai-Berry--Anti-Aging-Properties.html" target="_blank">Read more</a>
+            </section>
+            
+            <div class="clearIt"></div>
+            <h2>Don't waste açaí, eat it! </h2>
+            <p>The Blend team is now trying to figure out why you would even think about using these expensive products when you have the delicious and super healthy Blend Superfood Bar available nearby? Here in our “lab” our scientists are providing anti-aging products that are full of flavor. Don't waste açaí on your face--eat it! Your body will be thankful.</p>
+            <a href="http://www.npr.org/sections/thesalt/2016/11/22/502933703/eat-it-dont-leave-it-how-london-became-a-leader-in-anti-food-waste" target="_blank">Read more</a>
+               
+        </article>
+       </section>
+       
+       
+    <div class="clearIt"></div>
+
+       
+    <footer id="heroFooter">
+        <div id="footerContent">
+	<ul class="siteMap">
+        <li><a href="../index.html">HOME</a></li>
+	    <li><a href="aboutus.html">ABOUT US</a></li>
+	    
+<li>MENU<ul class="subNav">
+	    <li><a href="menu/bowls.html">BOWLS</a>
+       </li>
+        <li><a href="menu/smoothies.html">SMOOTHIES</a>
+        </li>
+        <li><a href="menu/orderOnline.html">ONLINE ORDER</a></li>
+    </ul></li>
+        
+        <li><a href="specials.html">SPECIALS</a></li>
+	    <li><a href="catering.html">CATERING</a></li>
+	    <li><a href="blog.html">BLOG</a></li>
+	    <li><a href="contactUs/contactUs.html">CONTACT US</a><ul class="subNav">
+	    <li><a href="contactUs/career.html">CAREER</a>
+       </li>
+    </ul></li>
+	    
+	</ul>
+       <ul id="social-btn">
+           <li><a href=https://plus.google.com/+TheBlendSuperfoodBar><img src="../images/google.png"  alt="Google Plus" /></a></li>
+           <li><a href="https://www.facebook.com/TheBlendSuperfoodBar/"><img src="../images/face.png" alt="Facebook" /></a></li>
+           <li><a href="https://www.instagram.com/theblendsuperfoodbar/"><img src="../images/insta.png" alt="Instagram" /></a></li>
+       </ul>
+  </div>   
+        <p class="clearIt"><br>&copy; The Blend Superfood Bar 2017</p>
+    </footer>
+    
+    
+</body>
+
+</html>

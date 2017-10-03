@@ -1,0 +1,188 @@
+/* Notes and Table of Contents Section
+
+Notes:
+This document contains the style rules for the pages in the Menu folder and the page called Specials
+            ---------------
+Table of Contents
+1.Project Details
+2.Main Styles
+3.Media Queries
+*/
+
+/*   ******************************
+1.      Project Details
+Author: Hong-Sam Le, Jane La Motte, Paulo da Silva Pamplona
+Project: The Blend Superfood Bar Website Re-Design
+Version: 1.1
+Last Update: 1/24/2017
+*/
+
+/*  *****************************
+2.      Main styles 
+*********************************   */
+        #bowlsGallery h2, #smoothieGallery h2 {
+                font-family: 'Delius Unicase', sans-serif;
+                text-transform: uppercase;
+                background-size: cover;
+                width: auto;
+                height: 150px;
+                color: #333;
+                text-align: center;
+                font-size: 2.5em;
+                font-weight: bold;
+                text-shadow: 1px 1px 3px black;
+        }
+        #bowlsGallery h2 {
+            margin-top: 100px;
+        }
+        #smoothieGallery h2 {
+            padding-top: 100px;
+        }
+        #smoothieGallery, #bowlsGallery {
+            margin: 0 auto;
+            max-width: 100%;
+        }
+        #bowls, #smoothies {
+            position:relative;
+            margin:0 auto;
+            padding: 0 auto;
+        }
+        #bowls figure, #smoothies figure {
+            width: 100%;
+        }
+        #bowls img, #smoothies img {
+            width: 100%;
+            display: table-row;
+        }
+        #bowls li, #smoothies li {
+            margin-bottom: -10px;
+            -webkit-transition: scale 1s ease-in-out;
+            -moz-transition: scale 1s ease-in-out;
+            -o-transition: scale 1s ease-in-out;
+            transition: scale 1s ease-in-out;
+        }
+        #bowls li:hover, #smoothies li:hover {
+            -webkit-transform: scale(1.05);
+            -moz-transform: scale(1.05);
+            -o-transform: scale(1.05);
+            transform: scale(1.05);
+        }
+        #bowls figcaption, #smoothies figcaption {
+            position: absolute;
+            width: 100%;
+            margin-top: -20%;
+            font-family: 'Delius Unicase', sans-serif;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 1.7em;
+            color:#fff;
+            text-shadow: 1px 1px 3px black;
+        }
+        li figure figcaption {
+            position:relative;
+        }
+        #smoothies figcaption {
+            margin-right: .75em;
+        }
+       .ft-padd {
+            padding-bottom: 10em;
+       }
+       /* main styles end */
+       
+/*  *******************************
+3.       media queries 
+***********************************   */
+       
+@media screen and (min-width:410px) {
+        #bowls figcaption, #smoothies figcaption {
+            position: absolute;
+        }
+        ul#bowls,  ul#smoothies {
+            display: inline-block;
+            max-height: 24em;
+            padding: 0 auto;
+            margin: 0 auto;
+            text-align:center;
+        }
+        #bowlsGallery {
+            width:100%;
+            padding: 0 auto;
+            margin: 0 auto;
+        }
+        #bowls figure img, #smoothies figure img {
+            width: 192px;
+        }
+        #bowls img, #smoothies img {
+            margin-right: -4px;
+            margin-bottom: 5px;
+        }
+        #bowls li, #smoothies li {
+            display: inline-block;
+        }
+        ul#bowls li figure figcaption, ul#smoothies li figcaption {
+            font-size: 1em;
+            max-width: 192px;
+            margin-top: -40px;
+        }
+        .ft-padd {
+            padding-bottom: 10em;
+       }
+}
+@media screen and (min-width:573px) {
+        #bowls {
+            padding: 0 4%;
+        }
+       #bowlsGallery {
+            width:80%;
+            padding:0;
+       }
+       
+}
+@media screen and (min-width:766px) {
+     #bowlsGallery {
+             width:90%;
+             margin:0 auto;
+        }
+}
+
+@media screen and (min-width:770px) {
+     #smoothieGallery {
+            margin: 0 auto 4.5em auto;
+        }
+    #smoothies {
+            padding: 0;
+    }
+}
+
+@media screen and (min-width:930px) {
+        #bowls {
+            padding: 0 4%;
+            width:auto;
+        }
+        #smoothies {
+            width: auto;
+            margin-bottom: 20%;
+        }
+        #smoothieGallery {
+            margin: 0;
+        }
+}
+@media screen and (min-width:960px) {
+  
+        #bowls {
+            padding: 0 5.5%;
+            margin:0 auto;
+        }
+        #smoothies {
+            width: auto;
+            padding: 0;
+            margin: auto;
+        }
+        #smoothieGallery {
+            width: auto;
+            margin: 0;
+        }
+
+}
+
+/* media queries end */

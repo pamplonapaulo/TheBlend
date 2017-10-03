@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact us| The Blend</title>
+    
+    <link href="../../css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+         
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!--[if lt IE 9]>
+    <../../script src="scripts/html5shiv.js"></script>
+    <![endif]-->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    
+    <script type="text/javascript">
+    $(document).ready(function(){
+       function fullScreen() {
+           $("#heroContact").css({
+               width:$(window).width(),
+               height:$(window).height()
+           });
+       } 
+        fullScreen();
+        
+        $(window).resize(function(){
+            fullScreen();
+        });
+        
+    });
+    </script>
+    
+
+    <link rel="icon" href="../../images/icon.png" sizes="16x16" type="image/png">
+    
+</head>
+
+<body>
+    <div id="mainNav">
+        <div id="home">
+            <a href="../../index.html"><img src="../../images/icon.png" alt="Home bottom" /></a>
+        </div>
+		<input type="checkbox" id="toggle" />
+		<label for="toggle">Menu</label>
+		<nav class="navigation">
+	<ul>
+	    <li><a href="../aboutus.html">ABOUT US</a></li>
+	    <li class="menuItem">MENU<ul>
+	        <li><a href="../menu/bowls.html">BOWLS</a></li>
+            <li><a href="../menu/smoothies.html">SMOOTHIES</a></li>
+            <li><a href="../menu/orderOnline.html">ORDER ONLINE</a></li>
+	    </ul></li>
+	    <li><a href="../specials.html">SPECIALS</a></li>
+	    <li><a href="../catering.html">CATERING</a></li>
+	    <li><a href="../blog.html">BLOG</a></li>
+	    <li class="contactItem" id="extraCurrent">CONTACT US<ul>
+	   	    <li><a>CONTACT US</a></li>
+	        <li><a href="career.html">CAREER</a></li>
+	    </ul></li>
+	</ul>
+</nav>
+	</div>
+	<div class="clearIt"></div>
+    <header id="heroContact" class="ajust">
+         <article class="headerSection">
+              <h1>Let’s connect! </h1>
+               <h2>How can we better serve you?</h2>
+                
+          </article>
+     </header>
+     <p class="courtesy">Photos courtesy of the owner</p>
+     <div class="grid-container">  
+		 <p class="grid-25 tablet-grid-20"><a href="tel:858-230-7475"><i class="material-icons">phone</i><br>858-230-7475</a></p>
+		 <p class="grid-25 tablet-grid-20 "><a href="mailto:contact@theblend.com "><i class="material-icons">email</i><br>contact@theblend.com</a></p>
+		 <p class="grid-25 tablet-grid-20"><i class="material-icons">event_available</i><br>Monday - Sunday <br>8AM -5PM</p>   
+		 <p class="grid-25 tablet-grid-20"><i class="material-icons">map</i><br>4121 Mission Blvd.<br>Pacific Beach <br>San Diego, CA 92109</p>
+	         
+   	 </div>
+       
+      <section id="container">
+          <article id="mainContent" class="contact">
+            <h2>We love providing healthy food choices for you</h2>
+			<p>Do you have questions, comments or anything else? Please use the form below to reach out and let us know how we can help. We would love to hear from you.</p>
+       		<form action="form.asp" method="post" id="contactForm">
+               <fieldset id="getInTouch" title="Get in touch">
+                  <legend>Get in touch</legend>
+                  <ol>
+                      <li>
+                          <label for="name">Name</label>
+<!--                         "label" tag puts text before the box or after the box -->
+                          <input type="text" id="name" title="Please enter your name" placeholder="Last, First" autofocus required /> <span class="require">*</span>
+<!-- "title" attribute gives instructions what to do when hover the field-->
+<!-- "placeholder" to show text in the box-->
+<!--  autofocus to make blinking -->
+                      </li>
+                      <li>
+                         <label for="email">Email </label>
+                         <input type="email" id="email" title="Please enter your email address" placeholder="name@url.com" required /><span class="require"> *</span>
+<!-- can do type="text" instead of type="email" but it is not good for collecting emails later on-->
+<!--if enter without will show error notice-->
+                      </li>
+                  
+                  </ol>
+               </fieldset>
+               <fieldset id="other" title="Other Information">
+                  <legend>Other Information</legend>
+                  <ol>
+                      <li>
+                          <label for="url">Website</label>
+                          <input type="url" id="url" title="web address" placeholder="http://www.yoursite.com"/>
+                      </li>
+                      <li>
+                         <label for="tel">Telephone</label>
+                          <input type="tel" id="tel" title="phone number" placeholder="000-000-0000"/> 
+                      </li>
+                      <li class="altLabel">
+                          <input type="checkbox" id="subcribe" value="yes" checked/>
+                          <label for="subcribe">Subcribe to our newsletter</label>
+<!-- switching label after input-->
+                      </li>
+                      <li class="altLabel">
+                          <input type="checkbox" id="volunteer" value="yes"/>
+                          <label for="volunteer">Volunteer to help our store</label>
+<!-- switching label after input-->
+                      </li>
+                      <li>
+                          <label for="reference">How did you find us?</label>
+                          <select id="reference">
+                              <option hidden>Choose</option>
+                              <option value="friend">A friend</option>
+                              <option value="fb">FaceBook</option>
+<!--                              selected to show first-->
+<!--                              <option value="twitter" selected>Twitter</option>-->
+                              <option value="instagram">Instagram</option>
+                              <option value="yelp">Yelp</option>
+                              <option value="other">Other</option>
+                          </select>
+                      </li>
+                      <li>
+                      	 <label for="reference2">What do you like the best?</label>
+						 <select size="3" id="reference2">
+                              <option hidden>Choose</option>
+                              <option value="bowls">Bowls</option>
+                              <option value="smoothies">Smoothies</option>
+                              <option value="catering">Catering</option>
+                              <option value="special">Specials</option>
+                              <option value="other">Other</option>
+                              
+                          </select>
+                         </li>
+                  </ol>
+               </fieldset>
+               <fieldset id="comments" title="Comments">
+                  <legend>Questions/Comments</legend>
+                  <ol>
+                      <li>
+                          <div class="groupHeadline">Request Type</div>
+                          <ol class="altLabel radioSet">
+                              <li>
+                                  <input type="radio" value="question" id="questionItem" name="requestType"/>
+                                  <label for="questionItem" class="rBtnLabels">Question</label>
+                              </li>
+<!--                              name="requestType" to select only 1 radio button-->
+                              <li>
+                                  <input type="radio" value="comment" id="commentItem"  name="requestType"/>
+                                  <label for="commentItem" class="rBtnLabels">Comment</label>
+                              </li>
+                          </ol>
+                      </li>
+                      <li>
+                          <label for="inquiry"></label>
+                          <textarea id="inquiry" placeholder="Your comment or question"></textarea>
+                      </li>
+                  </ol>
+                   
+               </fieldset>
+               <button type="submit">SEND</button>
+                
+            </form>
+        </article>
+       </section>
+       
+    
+       
+       
+    <div class="clearIt"></div>
+
+       
+    <footer id="heroFooter">
+        <div id="footerContent">
+	<ul class="siteMap">
+        <li><a href="../../index.html">HOME</a></li>
+	    <li><a href="../aboutus.html">ABOUT US</a></li>
+	    
+<li>MENU<ul class="subNav">
+	    <li><a href="../menu/bowls.html">BOWLS</a>
+       </li>
+        <li><a href="../menu/smoothies.html">SMOOTHIES</a>
+        </li>
+        <li><a href="../menu/orderOnline.html">ONLINE ORDER</a></li>
+    </ul></li>
+        
+        <li><a href="../specials.html">SPECIALS</a></li>
+	    <li><a href="../catering.html">CATERING</a></li>
+	    <li><a href="../blog.html">BLOG</a></li>
+	    <li><a href="contactUs.html">CONTACT US</a><ul class="subNav">
+	    <li><a href="career.html">CAREER</a>
+       </li>
+    </ul></li>
+	    
+	</ul>
+       <ul id="social-btn">
+           <li><a href=https://plus.google.com/+TheBlendSuperfoodBar><img src="../../images/google.png"  alt="Google Plus" /></a></li>
+           <li><a href="https://www.facebook.com/TheBlendSuperfoodBar/"><img src="../../images/face.png" alt="Facebook" /></a></li>
+           <li><a href="https://www.instagram.com/theblendsuperfoodbar/"><img src="../../images/insta.png" alt="Instagram" /></a></li>
+       </ul>
+  </div>   
+        <p class="clearIt"><br>&copy; The Blend Superfood Bar 2017</p>
+    </footer>
+    
+    
+</body>
+
+</html>

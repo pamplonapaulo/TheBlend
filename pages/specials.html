@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Specials | The Blend</title>
+    
+    <link href="../css/main.css" rel="stylesheet" type="text/css" />
+
+    <link href="../css/menu.css" rel="stylesheet" type="text/css" />
+
+    <link href="../css/lightbox.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script src="../scripts/jquery.js"></script>
+    
+<!--    <script type="text/javascript" src="../scripts/script.js"></script>-->
+
+    <!--[if lt IE 9]>
+    <../script src="scripts/html5shiv.js"></script>
+    <![endif]-->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    
+    <script type="text/javascript">
+    $(document).ready(function(){
+       function fullScreen() {
+           $("#heroMaster").css({
+               width:$(window).width(),
+               height:$(window).height()
+           });
+       } 
+        fullScreen();
+
+        $(window).resize(function(){
+            fullScreen();
+        });
+        
+    });
+    </script>
+    
+    <link href="../images/icon.png" rel="icon" type="image/x-icon" />
+    
+</head>
+
+<body>
+    <div id="mainNav">
+        <div id="home">
+            <a href="../index.html"><img src="../images/logo_1203x1203.png" alt="Home bottom" /></a>
+        </div>
+<input type="checkbox" id="toggle" />
+<label for="toggle">Menu</label>
+
+<nav class="navigation">
+	<ul>
+	    <li><a href="aboutus.html">ABOUT US</a></li>
+	    <li class="menuItem">MENU<ul>
+	        <li><a href="menu/bowls.html">BOWLS</a></li>
+            <li><a href="menu/smoothies.html">SMOOTHIES</a></li>
+            <li><a href="menu/orderOnline.html">ORDER ONLINE</a></li>
+	    </ul></li>
+	    <li class="current"><a>SPECIALS</a></li>
+	    <li><a href="catering.html">CATERING</a></li>
+	    <li><a href="blog.html">BLOG</a></li>
+	    <li class="contactItem">CONTACT US<ul>
+	   	    <li><a href="contactUs/contactUs.html">CONTACT US</a></li>
+	        <li><a href="contactUs/career.html">CAREER</a></li>
+	    </ul></li>
+	</ul>
+</nav>
+</div>
+<div class="clearIt">
+</div>
+    <section id="container">
+       
+        <article id="bowlsGallery">
+            <h2>Special Offers</h2>
+            <ul id="bowls">
+              <div id="overlay" style="opacity: 0.1; display: none;"></div>
+                <a id="#" class="btn" name="1"><li><figure><img src="../images/menus/bowls_180x180-1.png" alt="Basic Bowl"/><figcaption>Basic</figcaption></figure></li></a>
+                <a id="#" class="btn" name="2"><li><figure><img src="../images/menus/bowls_180x180-4.png" alt="Tropical Bowl" /><figcaption>Tropical</figcaption></figure></li></a>
+                <a id="#" class="btn" name="3"><li><figure><img src="../images/menus/bowls_180x180-3.png" alt="Greens Bowl" /><figcaption>Greens</figcaption></figure></li></a>
+                <a id="#" class="btn" name="4"><li><figure><img src="../images/menus/bowls_180x180-8.png" alt="Pitaya Bowl" /><figcaption>Pitaya</figcaption></figure></li></a>
+                </ul>
+        </article>
+       
+       
+       
+       
+       
+<!--
+        <article id="bowlsGallery">
+            <h2>Special Offers</h2>
+            <ul id="bowls">
+              <div id="overlay" style="opacity: 0.1; display: none;"></div>
+                <a href="#" id="BowlPopUp1Trig" class="btn"><li><figure><img src="../images/menus/bowls_180x180-1.png" alt="Basic Bowl"/><figcaption>Basic</figcaption></figure></li></a>
+                <a href="#" id="BowlPopUp2Trig" class="btn"><li><figure><img src="../images/menus/bowls_180x180-4.png" alt="Tropical Bowl" /><figcaption>Tropical</figcaption></figure></li></a>
+                <a href="#" id="BowlPopUp3Trig" class="btn"><li><figure><img src="../images/menus/bowls_180x180-3.png" alt="Greens Bowl" /><figcaption>Greens</figcaption></figure></li></a>
+                <a href="#" id="BowlPopUp4Trig" class="btn"><li><figure><img src="../images/menus/bowls_180x180-8.png" alt="Pitaya Bowl" /><figcaption>Pitaya</figcaption></figure></li></a>
+                </ul>
+        </article>
+-->
+        <article class="ft-padd" id="smoothieGallery" >
+            </br>        
+        </article>
+        <article class="modalBox" id="galleryItemContent1" style="display: none;">
+            <a href="#" class="close">x</a>
+            <figure>
+            <img src="../images/menus/bowls_480x595.jpg" alt="meal" />
+            <figcaption>
+                
+            Basic Bowl
+            
+            </figcaption>
+            </figure>
+            <p>Acai is a kind of blackish-purple berries imported from the Amazon. Research shows that acai berries are extremely high in anthocyanins, a form of plant antioxidant associated with the ability to lower cholesterol levels in the blood stream. They are also rich in plant sterols.
+            </p>
+         <div class="nutritionFacts"><p>Nutrition Facts <br />(1 portion)<br /> <br />
+370 cals.<br />
+10 grams vegetable fat.<br />
+43 grams sugar. </br> <br />
+</p></div>
+         <div class="ingredients"><p>Ingredients<br /> <br />
+Blended: açaí, banana, and almond milk. </br> </br> Toppings: granola, banana, and honey.
+        </p>
+         </div>
+        </article>
+        <article class="modalBox" id="galleryItemContent2" style="display: none;">
+            <a href="#" class="close">x</a>
+            <figure>
+            <img src="../images/menus/bowls_300x300.png" alt="meal" />
+            <figcaption>
+                
+            Tropical Bowl
+            
+            </figcaption>
+            </figure>
+            <p>Research shows that acai berries are extremely high in anthocyanins, a form of plant antioxidant associated with the ability to lower cholesterol levels in the blood stream. They are also rich in plant sterols that provide cardio-protective benefits to our cells.
+            </p>
+         <div class="nutritionFacts"><p>Nutrition Facts </br>(1 portion)</br> </br>
+370 cals.<br />
+10 grams vegetable fat.<br />
+43 grams sugar. <br /> <br />
+</p></div>
+         <div class="ingredients"><p>Ingredients<br /> <br />
+Blended: acai, banana, mango, pineapple, coconut milk. <br /> <br /> Toppings :granola, banana, strawberries, mango, coconut shreds, honey
+        </p>
+         </div>
+        </article>
+        <article class="modalBox" id="galleryItemContent3" style="display: none;">
+            <a href="#" class="close">x</a>
+            <figure>
+            <img src="../images/menus/bowls_180x180-3.png" alt="meal" />
+            <figcaption>
+                
+            Greens Bowl
+            
+            </figcaption>
+            </figure>
+            <p>They are also rich in plant sterols that provide cardio-protective benefits to our cells.
+            </p>
+         <div class="nutritionFacts"><p>Nutrition Facts <br />(1 portion)<br /> <br />
+370 cals.<br />
+10 grams vegetable fat.<br />
+43 grams sugar. <br /> <br />
+</p></div>
+         <div class="ingredients"><p>Ingredients<br /> <br />
+Blended: acai,banana,pineapple,kale,spirulina,lemon, ginger. <br /> <br /> Toppings: granola, banana, and honey.
+        </p>
+         </div>
+        </article>
+        <article class="modalBox" id="galleryItemContent4" style="display: none;">
+            <a href="#" class="close">x</a>
+            <figure>
+            <img src="../images/menus/bowls_180x180-8.png" alt="meal" />
+            <figcaption>
+                
+            Pitaya Bowl
+            
+            </figcaption>
+            </figure>
+            <p>Acai is a kind of blackish-purple berries imported from the Amazon. Research shows that acai berries are extremely high in anthocyanins, a form of plant antioxidant associated with the ability to lower cholesterol levels in the blood stream. They are also rich in plant sterols that provide cardio-protective benefits to our cells.
+            </p>
+         <div class="nutritionFacts"><p>Nutrition Facts </br>(1 portion)<br /> <br />
+370 cals.<br />
+10 grams vegetable fat.<br />
+43 grams sugar. <br /> <br />
+</p></div>
+         <div class="ingredients"><p>Ingredients<br /> <br />
+Blended: açaí, banana, and almond milk. <br /> <br /> Toppings: granola, banana, and honey.
+        </p>
+         </div>
+        </article>
+        </section>
+        
+        
+        
+        
+        
+        
+        <div class="clearIt"></div>
+
+       
+    <footer id="heroFooter">
+        <div id="footerContent"                                                                                                                                                                                                                                         >
+	<ul class="siteMap">
+        <li><a href="../index.html">HOME</a></li>
+	    <li><a href="aboutus.html">ABOUT US</a></li>
+	    
+<li><ul class="subNav">MENU
+	    <li><a href="menu/bowls.html">BOWLS</a>
+       </li>
+        <li><a href="menu/smoothies.html">SMOOTHIES</a>
+        </li>
+        <li><a href="menu/orderOnline.html">ORDER ONLINE</a></li>
+    </ul></li>
+        
+        <li><a href="specials.html">SPECIALS</a></li>
+	    <li><a href="catering.html">CATERING</a></li>
+	    <li><a href="blog.html">BLOG</a></li>
+	    <li><ul class="subNav"><a href="contactUs/contactUs.html">CONTACT US</a>
+	    <li><a href="contactUs/career.html">CAREER</a>
+       </li>
+    </ul></li>
+	</ul>
+       <ul id="social-btn">
+           <li><a href=https://plus.google.com/+TheBlendSuperfoodBar><img src="../images/google.png"  alt="Google Plus" /></a></li>
+           <li><a href="https://www.facebook.com/TheBlendSuperfoodBar/"><img src="../images/face.png" alt="Facebook" /></a></li>
+           <li><a href="https://www.instagram.com/theblendsuperfoodbar/"><img src="../images/insta.png" alt="Instagram" /></a></li>
+       </ul>
+  </div>   
+              <p class="clearIt"><br>&copy; The Blend Superfood Bar 2017</p>
+    </footer>
+</body>
+<script>
+
+$(document).ready(function(){
+    $('a[id^="#"]').on('click',function (e) {
+        e.preventDefault();
+        var numero = $(this).attr("name");
+        $("#overlay").fadeTo(500, .7);
+        $('#galleryItemContent' + numero).delay(600).fadeIn(100);
+        
+        $(".close, #overlay").click(function(event){
+            event.preventDefault();
+            $("#overlay").hide();
+            $('#galleryItemContent' + numero).hide();
+        });
+    });
+}); // close Doc Ready
+
+
+</script>
+</html>

@@ -1,0 +1,986 @@
+/* Notes and Table of Contents Section
+
+Notes:
+            ---------------
+Table of Contents
+1.Project Details, Color Guide, and Typography Guide
+2.CSS Reset
+3.Global Styles
+4.Header and Navigation
+5.Main Body Content
+6.Contact Form Styles
+7.Generic Selectors
+8.Footer
+9.Media Queries */
+
+/*******************************
+1.      Project Details
+Author: Hong-Sam Le, Jane La Motte, Paulo da Silva Pamplona
+Project: The Blend Superfood Bar Website Re-Design
+Version: 1.1
+Last Update: 1/24/2017
+
+        Color Guide
+body text: #000
+headings: #fff
+body background color:#fff
+
+        Typograpy Guide
+Headings: Delius Unicase and Montserrat
+Body: Montserrat
+ */
+
+
+@import 
+url('https://fonts.googleapis.com/css?family=Delius+Unicase|Montserrat:400,700');
+/*********************************
+2.      CSS Reset
+*********************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    margin: 0 auto -8px auto;
+    padding: 0;
+}
+ol, ul {
+	list-style: none;
+}
+/*close eric meyer reset*/
+
+/*********************************
+3.      Global Styles
+*********************************/
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+h1 {
+    font-size: 2.625em;
+}
+h2 {
+    font-size: 1.875em;
+    margin-bottom: .75em;
+}
+p {
+    margin-bottom: .5em;
+}
+a {
+    color:inherit;
+    text-decoration: none;
+}
+#container {
+	max-width: 960px;
+	margin: 0 auto;
+	position: relative;
+}
+
+
+
+#heroFooter {
+    background-image: url(../images/footer-bg.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    max-height: 500px;
+}
+#heroMaster {
+    background-image: url(../images/carousel/carousel_1495x745.JPG);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    max-height: 500px;
+    z-index: -100;
+}
+
+#mainContent {
+    margin: 0;
+    padding: 100px 0;
+    width: 100%;
+}
+#mainContent h2 {
+    font-family: 'Delius Unicase', sans-serif;
+    padding: 1em;
+    text-align: center;
+    text-transform: uppercase;
+}
+#mainContent p {
+    padding: 0 2em;
+    line-height: 1.5em;
+}
+/******************************
+4.      Header and Navigation
+*******************************/
+.headerSection  {
+    position: absolute;
+    top:50%;
+    width: 100%;
+    color:#fff;
+    text-shadow: 1px 1px 3px black;
+    font-weight: 800;
+    text-align: center;
+    transform: translate(0%,-50%);
+}
+/* navigation rules */
+#home {
+    position: relative;
+    margin:auto;
+}
+#home img {
+    float: left;
+    left:7px;
+    top: 7px;
+    position: absolute;
+    width: 20%;
+    z-index: 99999;
+}
+#mainNav {
+    max-width: 960px;
+    margin: 0 auto;
+    height: 3em;
+    text-align: center;
+    padding-bottom: 1em;
+}
+#mainNav nav {
+    height:0;
+    overflow: hidden;
+}
+.navigation ul {
+    font-weight: 800;
+}
+.navigation li {
+    position: relative;
+    z-index: 10;
+    background-color: #fff;
+}
+.navigation > ul {
+    padding-top: 45px;
+}
+.navigation li  {
+    padding: .35em 0;
+}
+.navigation li a, .navigation {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+}
+.navigation li:focus, .navigation li:hover {
+    background-color: #000;
+}
+.navigation li:focus a, .navigation li:hover a {
+    color: #fff;
+}
+.menuItem:active ul li, .menuItem:focus ul li, .menuItem:hover ul li {
+    background-color: black;    
+}
+.menuItem ul li:active, .menuItem ul li:focus, .menuItem ul li:hover {
+    color:#000;
+    background-color: #fff;
+}
+.menuItem ul li:active a, .menuItem ul li:focus a, .menuItem ul li:hover a {
+    color:#000;
+}
+.contactItem:active, .contactItem:focus, .contactItem:hover {
+    background-color: #000;  
+    color:black;
+ }
+.contactItem:active ul li, .contactItem:focus ul li, .contactItem:hover ul li {
+    color:#fff;
+    background-color: black;    
+}
+.contactItem ul li:active, .contactItem ul li:focus, .contactItem ul li:hover {
+    background-color: #fff;  
+    color:#000;
+}
+.contactItem ul li:active a, .contactItem ul li:focus a, .contactItem ul li:hover a {
+    color:#000;
+}
+.menuItem:active, .menuItem:focus, .menuItem:hover {
+    color:black;
+}
+.menuItem ul, .contactItem ul {
+    height: 0;
+    overflow: hidden;
+}
+.contactItem:active ul, .contactItem:focus ul, .contactItem:hover ul {
+    height: 3.5em;
+}
+.contactItem:active ul, .contactItem:focus ul, .contactItem:hover ul {
+   margin-top: -.7em;
+}
+.menuItem:active ul, .menuItem:focus ul, .menuItem:hover ul {
+    height: 110px;
+    margin-top: -1em;
+}
+.menuItem ul, .contactItem ul {
+    height: 0;
+  -webkit-transition: height 1s ease;
+     -moz-transition: height 1s ease;
+       -o-transition: height 1s ease;
+      -ms-transition: height 1s ease;
+          transition: height 1s ease;
+}
+.menuItem ul li, .contactItem ul li {
+        line-height: 1em;
+}
+
+
+/* rules for certain browsers */
+body {
+    -webkit-animation:bugfix infinite 1s /* -webkit- is for safari & chrome, just prevent for failing */
+}
+@-webkit-keyframe bugfix {
+    from {padding: 0;}
+    to {padding: 0;}
+}
+#mainNav input[type=checkbox] {
+    position: absolute;
+    top:-999em; /* make sure users won't see it , hide this off the screen */
+    left: -999em;
+}
+#mainNav label {
+    display: block;
+    background: url("../images/nav-icon.png") no-repeat right center; /* short hand notation for background image */
+    text-indent: -999em;
+    cursor: pointer;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none; /* actually this is only to make sure that it will work, since we have different browsers and their bugs */
+    position: absolute;
+    top:3px;
+    left: 81%;
+    width:40px;
+    height: 60px;
+    z-index: 10;
+}
+#mainNav input[type=checkbox]:checked ~nav {
+    height: auto;
+    overflow: visible;
+    z-index: 10;
+}
+
+
+/**********************************
+5.      Main Body Content
+**********************************/
+
+
+    /* homepage specific rules */
+    
+#heroHome {
+    background-image: url(../images/carousel/carousel_1445x701.JPG);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    max-height: 500px;
+    z-index: -100;
+}
+#mainContent.homePage {
+            padding: 35px 0;
+            margin-left: 0;
+            margin-right: 0;
+            width: 100%;
+        }
+        #orderHome{
+            width: 150px;
+            background-color: seagreen;
+            color: #fff;
+            text-align: center;
+            border-radius: 8px;
+            margin: 30px auto 0;
+        }
+        #orderHome a {
+            display: block;
+            padding: 15px 10px 8px;
+        }
+     
+        #colA h2 {
+            background-image: url(../images/homePage/homePage_403x415.JPG);
+        }
+        
+        #colB h2 {
+            background-image: url(../images/homePage/homePage_402x408.JPG);
+        }
+        
+        #colC h2 {
+            background-image: url(../images/homePage/homePage_172x148.png);
+        }
+        
+        #colA,
+        #colB {
+            margin-bottom: 30px;
+            
+        }
+        
+        #colA h2,
+        #colB h2,
+        #colC h2 {
+            background-size: cover;
+            height: 150px;
+            width: auto;
+            color: #fff;
+            text-align: center;
+            padding-top: 100px;
+            font-size: 2.5em;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px black;
+        }
+        
+        #colA p,
+        #colB p,
+        #colC p {
+            padding: 0 5% 0;
+        }
+        
+        h2.fullscreen {
+            display: none;
+        }
+        
+        #instagramRowA,
+        #instagramRowB {
+            height: 150px;
+            overflow: hidden;
+            margin-left: 10px;
+            margin-bottom: 5px;
+        }
+        
+        #instagramRowB {
+            margin-bottom: 10px;
+        }
+        
+        #instagramRowA figure,
+        #instagramRowB figure {
+            display: inline-block;
+        }
+        
+        #instagramRowA figure img,
+        #instagramRowB figure img {
+            height: 150px;
+            width: 150px;
+        }
+        /* Tooltip container */
+        
+        .tooltip {
+            position: relative;
+            display: block;
+        }
+        /* Tooltip text */
+        
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 250px;
+            background-color: #31b7f6;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0px;
+            border-radius: 6px;
+            /* Position the tooltip text */
+            position: absolute;
+            z-index: 1;
+            bottom: 95%;
+            left: 10%;
+            /* Fade in tooltip */
+            opacity: 0;
+            transition: opacity 1s;
+        }
+        /* Show the tooltip text when you mouse over the tooltip container */
+        
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+         /* end homepage specific rules */
+         
+         /* about us page styles */
+         
+         #heroAbout {
+		background-image: url(../images/aboutUs/aboutUs_2816x2112.jpg);
+		background-size: cover;
+		background-position: center;
+		position: relative;
+		max-height: 500px;
+		min-height: 800px;
+		z-index: -100;
+	     }
+		#mainContent.about h2 {
+			text-align: left;
+		}
+		.courtesy {
+			font-size: 0.8em;
+			padding-right: 1em;
+			padding-top: 1em;
+			text-align: right;
+		}
+	
+         
+         /* end about us styles */
+         
+         /* 'MENU' AND 'SPECIALS' PAGES STYLES ARE IN A SEPARATE DOC CALLED MENU.CSS */
+         
+         /* catering page styles */
+         
+         #heroCater {
+			background-image: url(../images/catering/catering_1800x1200.jpg);
+			background-size: cover;
+			background-position: center;
+			position: relative;
+			max-height: 500px;
+			min-height: 800px;
+			z-index: -100;
+	    }
+		#mainContent.catering h2 {
+			text-align: left;
+			padding-top:35px;
+			padding-bottom:0;
+		}
+		.courtesy {
+			font-size: 0.8em;
+			padding-right: 1em;
+			padding-top: 1em;
+			text-align: right;
+		}
+		#cater1 {
+			margin-top: 4em;
+		}
+		#cater1 img {
+			float: left;
+			width: 50%;
+			height: auto;
+		}
+		#cater2 img {
+			width: 100%;
+			height: auto;
+		}
+         
+         /* end catering page */
+         
+         /* blog page styles */
+         
+         #heroBlog {
+    			background-image: url(../images/blog/cherries-in-a-bowl_640.jpg);
+    			background-size: cover;
+    			background-position: center;
+    			position: relative;
+    			max-height: 500px;
+    			min-height: 800px;
+    			z-index: -100;
+    	    }
+    		#mainContent.blog h2 {
+    			text-align: left;
+    			padding-top: 35px;
+    			padding-bottom:0;
+    		}
+    		.courtesy {
+    			font-size: 0.8em;
+    			padding-right: 1em;
+    			padding-top: 1em;
+    			text-align: right;
+    		}
+    		#blog img{
+				max-width:100%;
+				height: auto;
+				padding: 1em;
+    		}
+			#blog {
+				float: right;
+				padding-bottom: 2em;
+			} 
+			#blog figcaption {
+				text-align: right;
+				font-size: 0.8em;
+				padding-right: 1em;
+			}
+
+    		#mainContent.blog a[target="_blank"] {
+    			padding: 2em;
+    			text-decoration: underline;
+    			color:#041bea;
+    		}
+    		#mainContent.blog a[target="_blank"]:hover {
+    			color: #ccc;
+			
+    		}
+		
+         
+         /* end blog styles */
+         
+         /* career page styles  */
+         
+         #heroCareer {
+			background-image: url(../images/contactUs/career3.png);
+			background-size: cover;
+			background-position: center;
+			position: relative;
+			max-height: 500px;
+			min-height: 800px;
+			z-index: -100;
+	    }
+		#mainContent.career h2 {
+			text-align: left;
+		}
+		#mainContent.career a[href^="mailto"] {
+			text-decoration: underline;
+			color: #041bea;
+		}
+		#mainContent.career a[href^="mailto"]:hover {
+			color: #ccc;
+		}
+		.courtesy {
+			font-size: 0.8em;
+			padding-right: 1em;
+			padding-top: 1em;
+			text-align: right;
+		}
+		#career {
+			list-style-type:disc;
+			padding-left: 5em;
+			line-height: 2;
+		}
+         
+         /* end career page  */
+/*********************************
+6.      Contact Page and Form Styles
+***********************************/
+
+#heroContact {
+			background-image: url(../images/contactUs/contactpage.png);
+			background-size: cover;
+			background-position: center;
+			position: relative;
+			max-height: 500px;
+			min-height: 800px;
+			z-index: -100;
+	    }
+		#mainContent.contact h2 {
+			text-align: left;
+			margin-top: -2em;
+		}
+		.courtesy {
+			font-size: 0.8em;
+			padding-right: 1em;
+			padding-top: 1em;
+			text-align: right;
+		}
+		a[href^="mailto:"]{
+			color: #041bea;
+			text-decoration: underline;
+		}
+		a[href^="tel:"] {
+			color: #041bea;
+			text-decoration: none;
+		}
+		a[href^="mailto:"]:hover, a[href^="tel:"]:hover {
+			color: #ccc;
+		}
+		.grid-container {
+			max-width: 960px;
+			margin: 0 auto;
+		}
+		.grid-container p {
+			background-color:hsla(210,80%,60%,.3);
+			height: 90px;
+			text-align: center;
+			padding: 1em 0;
+		}
+		.material-icons {
+			font-size: 35px;
+		}
+		/*----------------------form styles-----------------*/
+		fieldset {
+			border: none;
+			padding: 1.5em .75em .25em;
+		/*    try http://hslpicker.com/ to pick hsl color*/
+			background: linear-gradient(hsla(210,80%,60%,.3), hsla(0,0%,100%,.4));   
+		}
+		legend {
+			display: block;
+			padding: 2em .5em 0;
+			font-weight: 300;
+			font-size: 1.25em;
+			color: #069;
+			border-bottom: solid 1px #fff;
+			text-align: center;
+			width: 100%;
+		}
+		input, textarea {
+			padding: 5px;
+			width: 55%;
+			border: solid 1px #999;
+		}
+		input[type=checkbox], input[type=radio] {
+			width: auto;
+		}
+		.altLabel label {
+			width: auto;
+		}
+		#contactForm ol {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+		#contactForm li {
+			padding-bottom: .75em;
+		}
+		#contactForm li:hover {
+		    background-color:transparent;
+		}
+		#comments .radioSet li{
+			display: inline-block;
+			margin-right: 10px;    
+		}
+		.groupHeadline {
+			font-weight: 300;
+			border-bottom: solid 1px #999;
+			margin-bottom: .3em;
+		}
+		textarea {
+			width: 95%;
+			font-family: Arial, sans-serif;
+			min-height: 5em;
+			margin-top: -2em;
+		}
+		#container label {
+			width: 30%;
+			text-align: right;
+			display: inline-block;
+		}
+		button[type=submit] {
+			background-color: #069;
+			color: #fff;
+			padding: 5px 15px;
+			margin: 1em auto 0;
+			display: block;
+			border: none;
+		}
+		button[type=submit]:hover {
+			background-color: #333;
+		}
+
+	
+	
+	/*----------------------end form styles-----------------*/
+
+/**********************************
+7.      Generic Selectors
+**********************************/
+.clearIt {
+    clear: both;
+}
+/*********************************
+8.      Footer
+**********************************/
+footer {
+    text-align: center;
+    width: 100%;
+    min-height: 300px;
+    position: absolute;
+    font-family: 'Delius Unicase', sans-serif;
+    text-transform: uppercase;
+}
+footer p {
+    position: relative;
+    bottom: -120px;
+    color: #fff;
+    text-shadow: 1px 1px 3px black;
+    
+}
+#footerContent {
+    display: none;
+    max-width: 960px;
+    margin: 0 auto;
+    }
+.navFooter {
+    display: none;
+    }
+#social-btn {
+    display: none;
+    }
+
+
+
+
+
+
+
+
+
+
+    
+/********************************
+9.      Media Queries
+**********************************/
+
+	@media screen and (min-width:600px) {
+			#contactForm li {
+				display: inline-block;
+				width: 49%;
+			}
+			#comments li {
+				display: block;
+				width: auto;
+			}
+			#comments textarea {
+				margin-top: -1em;
+			}
+			/*label {*/
+			/*	width: auto;*/
+			/*	text-align:left; */
+			/*}*/
+		}
+		@media screen and (min-width:720px) {
+			#mainContent.contact h2 {
+			padding-top: 5em;
+		}
+			.grid-container p {
+				float: left;
+				width: 25%;
+			}
+			
+		}
+
+	@media (min-width:720px) and (max-width:855px) {
+				#mainContent.blog section {
+				clear: both;
+			}
+			}
+
+@media screen and (min-width:800px) {
+            .headerSection h1 {
+                font-size: 3em;
+            }
+            #mainContent.homePage {
+                padding-top: 100px;
+                margin: 0;
+            }
+            #orderHome {
+                display: none;
+            }
+            #colA,
+            #colB,
+            #colC {
+                float: left;
+                width: 33%;
+                position: relative;
+            }
+            #colA h2,
+            #colB h2,
+            #colC h2 {
+                color: transparent;
+                text-shadow: none;
+            }
+            #colA h2.fullscreen,
+            #colB h2.fullscreen,
+            #colC h2.fullscreen {
+                position: absolute;
+                top: -175px;
+                display: inline-block;
+                color: #333;
+                background: none;
+               width: 100%;
+               padding-right: 0;
+               padding-left: 0;
+                text-align: center;
+                text-shadow: 2px 2px 6px #999;
+            }
+            #colC {
+                margin-bottom: 30px;
+            }
+        }
+        
+@media screen and (min-width:930px) {
+    
+   .navigation {
+        display: inline;
+}
+    .navigation ul {
+        padding: 0em 0 0 5em;
+        z-index: 1;
+    }
+    
+    .navigation li {
+        display: inline-block;
+        padding-bottom: 1em;
+        background-color: transparent;
+        z-index:1;
+    }
+   
+    .navigation a {
+        padding: 0 .5em 0 .5em;
+    }
+    .navigation li:hover a {
+        color:#ccc;
+    }
+    .navigation li:hover {
+        color: #ccc;
+        background-color: transparent;
+    }
+    .navigation li:hover {
+        color: #ccc;
+    }
+
+    .menuItem > ul, .contactItem > ul {
+            display: none;
+    }    
+    .navigation li li {
+        padding:auto;
+        padding-top:1em;
+        background-color: blue;
+        border-top:none;
+        float:none;
+        height: auto;
+        width: auto;
+        color:red;
+   }
+.contactItem li, .menuItem li {
+        background: yellow;
+}
+.contactItem:hover ul, .menuItem:hover ul {
+        padding:0;
+        margin-top: 10px;
+        background: transparent;
+        position: absolute;
+        color: blue;
+        display: block;
+        overflow: visible;
+}   
+li.contactItem:hover ul, li.menuItem:hover ul {
+        color: green;
+        width: 180px;
+        display:block;
+        overflow: visible;
+        text-align:left;
+        font-size: .5em;
+
+}
+    .navigation li li:hover {
+        color:#fff;
+        background-color: #006947;
+    }
+    .navigation li li:hover a {
+        color:#fff;
+    }
+    li.current, li.current:hover {
+        height: 100%;
+        background: black;
+        top:0;
+        padding: 30px auto auto auto; 
+    }
+    li.current a, li.current a:hover {
+        color: white;
+        padding-top: 10px;
+        margin-bottom: -10px;
+    }
+    #extraCurrent {
+    background-color:#000;
+    color:#ccc;
+}
+#extra2Current {
+    color:#ccc;
+    margin-bottom:-10px;
+}
+#currentExtra {
+    background-color:#fff;
+}
+#currentExtra a {
+    color:#000;
+}
+
+    #mainNav label {
+        display: none;
+    }
+    #mainNav nav {
+        height: auto;
+        overflow: visible;
+    }
+    header {
+        margin-top: -.8em;
+        11z-index: 9999;
+    }
+    .headerSection h1 {
+            font-size: 4em;
+            }
+    .headerSection h2 {
+            font-size: 2.4em;
+            }
+    footer p {
+        bottom: -110px;
+    }
+    #footerContent {
+        padding: 2em 0;
+        display: block;
+    }
+    .siteMap {
+        max-width: 660px;
+        margin: 0 auto 0 2em;
+        padding:0;
+        float: left;
+        color: #fff;
+        text-shadow: 1px 1px 3px black;
+ }
+    .siteMap a {
+        text-decoration: none;
+        color: #fff;
+    }
+    .siteMap li:hover {
+        background: none;
+    }
+        
+    .siteMap > li {
+        padding: 0 1em 0 0;
+        float: left;
+        text-align: left;
+        display: list-item;
+    }
+    .subNav li {
+        margin-right: -100px;
+        padding: 5px 0 0 5px;
+        text-align: left;
+        font-size: .7em;
+        display: list-item;
+        list-style-type: disc;
+        list-style-position: inside;
+    }
+    #social-btn {
+        margin-right: 2em;
+        display: inline;
+        float: right;
+    }
+    #social-btn ul {
+        display: inline;
+    }
+    #social-btn li {
+        display: inline;
+    }
+    #social-btn img {
+        float: right;
+        width: 45px;
+        padding-left: 10px;
+    }
+    .ajust {
+        top:-10px;
+    }
+}
